@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class ProjectController : MonoBehaviour
 {
+    public float speed;
     public Vector2 directionalInput;
     public GameObject prefab;
 
@@ -17,20 +18,21 @@ public class ProjectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position += (Vector3)directionalInput * speed * Time.deltaTime;
         transform.up = worldMousePosition - transform.position;
     }
 
-    public void OnLook (InputAction.CallbackContext context)
+    public void OnMove (InputAction.CallbackContext context)
     {
-        transform.up = worldMousePosition - transform.position;
+        directionalInput = context.ReadValue<Vector2>();
     }
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        GameObject spawnedObject = Instantiate(prefab, transform.position, Quaternion.identity);
-        if (spawnedObject)
+        if (context.performed)
         {
-            transform.position = spawnedObject.transform.position * Time.deltaTime;
+            Debug.Log("Attack Time( " + context.phase + " )!");
         }
+        
     }
 }
