@@ -641,7 +641,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.47836384, g: 1, b: 0.4764151, a: 1}
@@ -896,7 +896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 883378503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1154264231}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_MethodName: OnTripleShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &883378503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,7 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gun
   maxSpawnDistance: 4
-  duration: 3
+  duration: 1
   bulletPrefab: {fileID: 8001477405715582876, guid: ab633a0aac11dc34ba0cd9e8269a0aac, type: 3}
 --- !u!1 &1361097050
 GameObject:
@@ -1538,7 +1550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855799207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1154264231}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1855799207
 MonoBehaviour:
   m_ObjectHideFlags: 0
